@@ -1,0 +1,367 @@
+@import "normalize";
+
+
+//SASS 
+
+
+//COLOURS
+$blue: #A1C9D6;
+$white: #FFFFF2;
+$brown: #896B4C;
+$drkblue: #3F525B;
+
+
+
+
+
+//CSS Starts here:
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	color: #3D3D3D;
+	font-size: 17px;
+   	line-height: 27px;
+   	background: $blue;
+   	text-align: center;
+}
+
+::selection {background: $blue;}
+::-moz-selection {background: $blue;}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Lobster', Georgia, Times, serif;
+	margin: 20px 0;
+}
+
+h1{
+	font-size: 60px;
+	line-height: 70px;
+
+}
+
+h2{
+	font-size: 40px;
+	line-height: 50px;
+}
+
+h3{
+	font-size: 28px;
+	line-height: 35px
+
+}
+
+h4{
+	font-size: 20px;
+}
+
+
+a {
+	color:#FFF;
+	text-decoration: none;
+} 
+
+a:hover {color:$blue;}  
+a:active {color:$blue;} 
+
+
+nav{
+	position: fixed;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	padding: 5px 0;
+
+		a{
+		font-size: 22px;
+		font-weight: 500;
+		color: rgba(255,255,255,0.7);
+		}
+
+		ul{
+			padding-left: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		li{
+			text-transform: uppercase;
+			display: inline;
+			padding: 0 40px 0 0;
+
+			&:last-child{
+				padding-right:0px; 
+			}
+		}
+}
+
+
+
+.home{
+	background-image: url("../images/oysters-header.jpg");
+	background-size: cover; 
+	height: 550px;
+	padding: 150px 100px;
+}
+
+.logo{
+	max-width: 550px;
+	margin: 0 auto;
+	background: url("../images/logo-500.png"), rgba(255,255,255,0.6);
+	background-repeat: no-repeat;
+	background-position: 50% 10px; 
+	text-align: center;
+
+		p{
+			padding: 220px 0 0 0; /*This gives space below the logo image and the contact info and it gets rid of the 40px padding of the left, from the browser*/ 
+			margin:0;
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+		a{
+			color: black;
+			text-decoration: none;
+		}
+
+		img{
+			padding: 0 7px;
+
+			&:first-child{
+				padding-left: 0;
+			}
+		}
+}
+
+
+
+.introWrapper{
+	background: $white;
+}
+
+.innerWrapper{
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 2%;
+
+}
+
+.leftCopy{
+	float: left;
+	max-width: 59%;
+	margin-right: 1%;
+
+}
+
+.rightMediaBox{
+	float: left;
+	max-width: 40%;
+}
+
+
+
+.spacer1Wrapper{
+	height: 300px;
+	background: url(../images/spacer1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+
+}
+
+.about{
+	background: $drkblue;
+	color: $white; 
+}
+
+
+
+.wood{
+	background: url("../images/wood.jpg") repeat-x fixed, $brown;
+	padding: 35px 0 50px 0;
+}
+
+.menu{
+	max-width: 950px;
+	background: $white url(../images/paper.jpg);
+	margin: 0 auto;
+	padding: 3%;
+	box-shadow: 0px 2px 2px -2px rgba(0,0,0,0.15), 0px 4px 6px 0px rgba(0,0,0,0.25);
+
+
+		h1{
+			border-bottom: 2px solid #000;
+			padding-bottom: 25px;
+		}
+
+		h3{
+			margin-top: 2em;
+		}
+
+		&:first-of-type{
+			margin-top: -0.75em;
+		}
+
+		h4{
+			display: inline;
+		}
+
+		p{
+			margin: .7em 0;
+		}
+}
+
+
+.spacer2Wrapper{
+	background: url("../images/lobster.jpg");
+	background-repeat: no-repeat ;
+	background-size: cover;
+	height: 250px;
+}
+
+
+#eventsWrapper{
+	background: $blue;
+	padding: 25px 5%;
+}
+
+.half{
+	float: left;
+	max-width: 49.5%;
+	margin-right: 0.5%;
+
+		header{
+		max-width: 100%;
+		background: $white;
+		}
+}
+
+
+
+.circle{ /*I had to look online to see how to do this circle with the inner boarder in it*/
+	display: inline-block;
+	background: $white;
+	padding: 8px;
+	border-radius: 50%;
+}
+
+
+	
+
+.contact-form {
+	background: $white;
+	border: 1px solid $drkblue;
+	border-radius: 6px;
+	padding: 25px;
+	margin: 20px;
+
+	  	fieldset {
+		  border: none;
+		  position: relative;
+		  padding:0;margin:0;
+		}
+
+		 label {
+  			display: block;
+  			margin-bottom: 12px;
+		}
+
+		input[type="text"] {
+  			border: 1px solid $drkblue;
+  			font-size: 16px;
+  			padding: 4px;
+  			width: 392px;
+		}
+
+
+		input{
+			.name {
+  			margin-left: 50px;
+			}
+
+			.email {
+  			margin-left: 51px;
+			}
+		}
+
+		
+		textarea{
+
+			.msg {
+			  border: 1px solid $drkblue;
+			  margin-left: 30px;
+			  vertical-align: top;
+			  width: 400px;
+			  height: 120px;
+			}
+
+		}
+		
+}
+
+
+.contact-form input[type="submit"] {
+  float: right;
+  margin-right:27px;
+}
+.contact-form textarea#msg:focus,
+.contact-form input[type="text"]:focus {
+	outline: none;
+  	background: $white;
+}
+
+
+
+
+
+.events{ /* This is the inner border of the circle */ 
+	margin: 0 auto;
+	padding: 12%;
+	border: 1px solid $drkblue;
+	border-radius: 100%;
+	width: 475px;
+	height: 475px;
+
+}
+
+.gallery{
+	clear: both;
+	padding-top: 30px;
+}
+
+.poleroid{
+	float: left;
+	width: 32%;
+
+		img{ /*This gives an image a poleroid effect*/
+			border: 10px solid $white;
+			border-bottom: 45px solid $white;
+			box-shadow: 0 4px 6px rgba(0,0,0,.3);
+		}
+
+		h6{ /*this is the caption on the poleriod effect*/
+			color: black;
+			margin: -40px 0 35px 0;
+			font-size: 16px;
+		}
+}
+
+
+.middle{
+	margin: 0 1%;
+}
+
+
+#hoursWrapper{
+	clear: both;
+	background: $brown;
+	padding: 25px 5%;
+
+}
+
+.hours{
+	color: $white;
+	margin: 0 auto;
+
+		p{
+		margin: 0; /*this makes the paragraphs closer together*/
+		}
+}
+
